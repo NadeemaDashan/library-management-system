@@ -1,11 +1,10 @@
 package org.example.service;
 
-import org.springframework.stereotype.Service;
-import org.example.dto.BookDto;
+import org.example.dto.Book;
 
 
 
 public interface BookService {
 
-    void addBook(BookDto bookDto);
+    void addBook(Book book);
 }

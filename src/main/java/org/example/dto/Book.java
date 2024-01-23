@@ -9,7 +9,7 @@ import lombok.ToString;
 @NoArgsConstructor
 @Data
 @ToString
-public class BookDto {
+public class Book {
 
     private String isbn;
     private String title;
