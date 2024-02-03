@@ -22,17 +22,20 @@ public class BookController {
     public void addBook(@RequestBody Book book){
         service.addBook(book);
     }
+
     @GetMapping("/get")
     @ResponseStatus(HttpStatus.FOUND)
     public List<BookEntity> getBook(){
         return service.getBook();
     }
+
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
     public ResponseEntity<String> deleteBook(@PathVariable Long id){
         boolean isDeleted=service.deleteBook(id);
         return isDeleted ?ResponseEntity.ok("Deleted"):ResponseEntity.notFound().build();
     }
+
     @GetMapping("/search/{id}")
     public ResponseEntity<Book> getBookById(@PathVariable Long id){
         return ResponseEntity.ok(service.getBookById(id));

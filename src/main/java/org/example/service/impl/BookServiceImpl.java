@@ -50,6 +50,4 @@ public class BookServiceImpl implements BookService {
         Optional <BookEntity> byId=repository.findById(id);
         return mapper.convertValue(byId,Book.class);
     }
-
-
 }
